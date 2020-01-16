@@ -1,0 +1,62 @@
+#задание 1
+
+a = 10
+b = 15 + 14
+c = a * 2
+d = b + c
+
+print(a, b)
+print(c, d)
+print("Hello, world")
+print("Hello ", "YourName")
+
+your_name = input("Enter your first name: ")
+your_age = int(input("Enter your age: "))
+print(your_age, your_name)
+
+#задание 2
+
+sec = int(input("Enter seconds:"))
+hour = sec // 3600
+last = sec % 3600
+minute = last // 60
+seconds = last % 60
+print(f"чч: {hour}, мм: {minute}, сс: {seconds}")
+
+#задание 3
+num = int(input('Enter n'))
+x = (num + (num * 11) + (num * 111))
+print(x)
+
+#задание 4
+
+a = int(input("value "))
+s = str(a)
+ls = list(map(int, s))
+r = max(ls)
+print(r)
+
+#задание 5
+earnings = int(input("income "))
+expenses = int(input("expenses "))
+profitability = 0
+profitability_per_person = 0
+if earnings > expenses:
+        print("Profit")
+        employee = int(input("employees "))
+        profitability = (earnings - expenses) / earnings
+        print("profitability ", profitability )
+        profitability_per_person = profitability / employee
+        print ("profitability_per_person", profitability_per_person)
+else:
+        print("Loss")
+
+#задание 6
+a = int(input("Результат первого дня "))
+b = int(input("Результат для проверки "))
+x = 1
+while a < b :
+    print(x, "день", a, "километров")
+    x = x + 1
+    a = a + (0.1 * a)
+print("на ", x, "день спортсмен пробежит не менее", b, "км")
