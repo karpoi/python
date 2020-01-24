@@ -1,0 +1,80 @@
+
+#Реализовать функцию, принимающую два числа
+#(позиционные аргументы) и выполняющую их деление.
+#Числа запрашивать у пользователя,
+#предусмотреть обработку ситуации деления на ноль.
+
+
+
+def division(*args):
+
+    try:
+        argument1 = int(input("Input dividend "))
+        argument2 = int(input("Input divider "))
+    result = argument1 / argument2
+    except ZeroDivisionError:
+    return "Error! Zero division"
+    except ValueError:
+    return "Value error"
+
+    return result
+
+    if argument2 != 0:
+        return argument1 / argument2
+    else:
+        print("Zero devider")
+
+
+
+print(f'result  {division()}')
+
+#Task 2
+#2. Реализовать функцию, принимающую несколько параметров, 
+#описывающих данные пользователя: имя, фамилия, год рождения, город проживания, email, телефон.
+#Функция должна принимать параметры как именованные аргументы. 
+#Реализовать вывод данных о пользователе одной строкой.
+
+    name = input('enter name')
+    surname = input('enter surname')
+    year = int(input('enter year'))
+    city = input('enter city')
+    email = input('enter email')
+    cellphone = input('input cellphone')
+
+def user_data (name, surname, year, city, email, cellphone):
+     return ' '.join([name, surname, year, city, email, cellphone])
+     
+#Task 3
+#3. Реализовать функцию my_func(), которая принимает три 
+#позиционных аргумента, и возвращает сумму наибольших двух аргументов.
+
+def my_func(arg1 , arg2, arg3):
+arg1 = int(input("enter argument 1")) 
+arg2 = int(input("enter argument 2"))
+arg3 = int(input("enter argument 3")) 
+    if arg1 > arg3 and arg2 > arg3:
+        return arg1 + arg2
+    elif arg1 > arg2 and arg1 < arg3:
+        return arg1 + arg3
+    else:
+        return arg2 + arg3
+
+println(f'Result - {my_func()}') 
+
+#Task 4
+#4. Программа принимает действительное положительное число x 
+#и целое отрицательное число y. Необходимо выполнить возведение числа x в степень y. 
+#Задание необходимо реализовать в виде функции my_func(x, y).
+#При решении задания необходимо обойтись без встроенной функции возведения числа в степень.
+
+def my_func(x,y)
+x = int(input("enter number")) 
+y = int(input("enter extent")) 
+z = 1
+result = 0
+while z < y:
+        result = x * x
+        z++
+print(f'Result - {my_func()}') 
+
+#Я категорически не успеваю делать задания целиком, так как взял два курса одновременно и яву и питона) извиняюсь
