@@ -1,0 +1,50 @@
+#Task 1
+
+from sys import argv
+name, time, salary, bonus = argv
+try:
+    time = int(time)
+    salary = int(salary)
+    bonus = int(bonus)
+    result = time * salary + bonus
+    print(f'Empolee salary  {result}')
+except ValueError:
+    print('Wrong value')
+
+#Task 2
+
+list1 = [1, 10, 1, 2, 0, 5, 8]
+list2 = [el for num, el in enumerate(list1) if list1[num - 1] < list1[num]]
+print(f'Original list {list1}')
+print(f'Modified list {list2}')
+
+#Task 3
+
+print(f'Numbers multiple 20 and 21 - {[el for el in range(20, 241) if el % 20 == 0 or el % 21 == 0]}')
+
+#Task 4
+
+list1 = [1, 4, 4, 2, 3, 2, 8, 10, 8, 5]
+list2 = [el for el in list1 if list1.count(el) < 2]
+print('Original list', list1)
+print('Modified list', list2)
+
+# Task 5
+
+from functools import reduce
+
+def func1(el1, el):
+    return el1 * el
+
+print(f'Multiplication result {reduce(func1, [el for el in range(99, 1001) if el % 2 == 0])}')
+
+
+# Task 6
+# Task 7
+
+
+from itertools import count
+from math import factorial
+
+def fibo_gen()
+#дальше не свосем понял что требуется
