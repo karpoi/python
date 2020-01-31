@@ -1,0 +1,86 @@
+#Task 1
+
+my_f = open('test.txt', 'w')
+line = input('Type some text \n')
+while line:
+    my_f.writelines(line)
+    line = input('Type some text \n')
+    if not line:
+        break
+
+my_f.close()
+my_f = open('test.txt', 'r')
+content = my_f.readlines()
+print(content)
+my_f.close()
+
+#Task 2
+
+my_file = open('file_2.txt', 'r')
+content = my_file.read()
+print(f'Content: \n {content}')
+my_file = open('file_2.txt', 'r')
+content = my_file.readlines()
+print(f'Lines - {len(content)}')
+my_file = open('file_2.txt', 'r')
+content = my_file.readlines()
+for i in range(len(content)):
+    print(f'Symbols {i + 1} - liines {len(content[i])}')
+my_file = open('file_2.txt', 'r')
+content = my_file.read()
+content = content.split()
+print(f'words - {len(content)}')
+my_file.close()
+
+#Task 3
+
+with open('sal.txt', 'r') as my_file:
+    sal = []
+    poor = []
+    my_list = my_file.read().split('\n')
+    for i in my_list:
+        i = i.split()
+        if int(i[1]) < 20000:
+           poor.append(i[0])
+        sal.append(i[1])
+print(f'< 20.000 {poor}, AVG {sum(map(int, sal)) / len(sal)}')
+
+#Task 4
+
+rus = {'One' : 'Один', 'Two' : 'Два', 'Three' : 'Три', 'Four' : 'Четыре'}
+new_file = []
+with open('file_4.txt', 'r') as file_obj:
+    #content = file_obj.read().split('\n')
+    for i in file_obj:
+        i = i.split(' ', 1)
+        new_file.append(rus[i[0]] + '  ' + i[1])
+    print(new_file)
+
+with open('file_4_new.txt', 'w') as file_obj_2:
+    file_obj_2.writelines(new_file)
+
+#Task 5
+
+def summary():
+    try:
+        with open('file_5.txt', 'w+') as file_obj:
+            line = input('Type numbers \n')
+            file_obj.writelines(line)
+            my_numb = line.split()
+            
+            
+            
+            
+#Task 6
+
+import json
+
+subj = {}
+with open('file_6.txt', 'r') as init_f:
+    for line in init_f:
+        subject, lecture, practice, lab = line.split()
+        subj[subject] = int(lecture) + int(practice) + int(lab)
+    print(f'Total practice hours - \n {subj}')
+    
+#Task 7
+
